@@ -1,0 +1,372 @@
+================
+Token info:
+Token: Function
+Token type: KEYWORD
+Line: 0
+==============
+================
+Token info:
+Token: Weird
+Token type: IDENTIFIER
+Line: 0
+==============
+================
+Token info:
+Token: (
+Token type: SYMBOL
+Line: 0
+==============
+================
+Token info:
+Token: A
+Token type: IDENTIFIER
+Line: 0
+==============
+================
+Token info:
+Token: :
+Token type: OPERATOR
+Line: 0
+==============
+================
+Token info:
+Token: Integer
+Token type: INTEGER
+Line: 0
+==============
+================
+Token info:
+Token: )
+Token type: SYMBOL
+Line: 0
+==============
+================
+Token info:
+Token: :
+Token type: OPERATOR
+Line: 0
+==============
+================
+Token info:
+Token: Integer
+Token type: INTEGER
+Line: 0
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 0
+==============
+================
+Token info:
+Token: Var
+Token type: KEYWORD
+Line: 2
+==============
+================
+Token info:
+Token: S
+Token type: IDENTIFIER
+Line: 3
+==============
+================
+Token info:
+Token: :
+Token type: OPERATOR
+Line: 3
+==============
+================
+Token info:
+Token: Integer
+Token type: INTEGER
+Line: 3
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 3
+==============
+================
+Token info:
+Token: Begin
+Token type: KEYWORD
+Line: 5
+==============
+================
+Token info:
+Token: S
+Token type: IDENTIFIER
+Line: 6
+==============
+================
+Token info:
+Token: :=
+Token type: OPERATOR
+Line: 6
+==============
+================
+Token info:
+Token: A
+Token type: IDENTIFIER
+Line: 6
+==============
+================
+Token info:
+Token: /
+Token type: OPERATOR
+Line: 6
+==============
+================
+Token info:
+Token: 2
+Token type: CONSTANT
+Line: 6
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 6
+==============
+================
+Token info:
+Token: If
+Token type: KEYWORD
+Line: 8
+==============
+================
+Token info:
+Token: S
+Token type: IDENTIFIER
+Line: 8
+==============
+================
+Token info:
+Token: <
+Token type: OPERATOR
+Line: 8
+==============
+================
+Token info:
+Token: 10
+Token type: CONSTANT
+Line: 8
+==============
+================
+Token info:
+Token: Then
+Token type: KEYWORD
+Line: 8
+==============
+================
+Token info:
+Token: Begin
+Token type: KEYWORD
+Line: 9
+==============
+================
+Token info:
+Token: Weird
+Token type: IDENTIFIER
+Line: 10
+==============
+================
+Token info:
+Token: :=
+Token type: OPERATOR
+Line: 10
+==============
+================
+Token info:
+Token: 1
+Token type: CONSTANT
+Line: 10
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 10
+==============
+================
+Token info:
+Token: Exit
+Token type: KEYWORD
+Line: 11
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 11
+==============
+================
+Token info:
+Token: End
+Token type: KEYWORD
+Line: 12
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 12
+==============
+================
+Token info:
+Token: S
+Token type: IDENTIFIER
+Line: 14
+==============
+================
+Token info:
+Token: :=
+Token type: OPERATOR
+Line: 14
+==============
+================
+Token info:
+Token: S
+Token type: IDENTIFIER
+Line: 14
+==============
+================
+Token info:
+Token: +
+Token type: OPERATOR
+Line: 14
+==============
+================
+Token info:
+Token: 9
+Token type: CONSTANT
+Line: 14
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 14
+==============
+================
+Token info:
+Token: If
+Token type: KEYWORD
+Line: 16
+==============
+================
+Token info:
+Token: S
+Token type: IDENTIFIER
+Line: 16
+==============
+================
+Token info:
+Token: >=
+Token type: OPERATOR
+Line: 16
+==============
+================
+Token info:
+Token: 10
+Token type: CONSTANT
+Line: 16
+==============
+================
+Token info:
+Token: Then
+Token type: KEYWORD
+Line: 16
+==============
+================
+Token info:
+Token: Begin
+Token type: KEYWORD
+Line: 17
+==============
+================
+Token info:
+Token: Weird
+Token type: IDENTIFIER
+Line: 18
+==============
+================
+Token info:
+Token: :=
+Token type: OPERATOR
+Line: 18
+==============
+================
+Token info:
+Token: 0
+Token type: CONSTANT
+Line: 18
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 18
+==============
+================
+Token info:
+Token: Exit
+Token type: KEYWORD
+Line: 19
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 19
+==============
+================
+Token info:
+Token: End
+Token type: KEYWORD
+Line: 20
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 20
+==============
+================
+Token info:
+Token: Weird
+Token type: IDENTIFIER
+Line: 22
+==============
+================
+Token info:
+Token: :=
+Token type: OPERATOR
+Line: 22
+==============
+================
+Token info:
+Token: 2
+Token type: CONSTANT
+Line: 22
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 22
+==============
+================
+Token info:
+Token: End
+Token type: KEYWORD
+Line: 23
+==============
+================
+Token info:
+Token: ;
+Token type: SYMBOL
+Line: 23
+==============

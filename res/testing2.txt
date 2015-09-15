@@ -1,0 +1,24 @@
+Function Weird(A : Integer) : Integer;
+
+Var
+ S : Integer;
+
+Begin
+ S := A/2;
+
+ If S < 10 Then
+ Begin
+  Weird := 1;
+  Exit;
+ End;
+
+ S := S + 9;
+ 
+ If S >= 10 Then
+ Begin
+  Weird := 0;
+  Exit;
+ End;
+
+ Weird := 2;
+End;
