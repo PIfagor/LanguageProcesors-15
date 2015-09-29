@@ -7,7 +7,7 @@ public class LexicalAnalyzer {
 	Hashtable<String, Integer> reserved = new Hashtable<String, Integer>();
 
 	public enum Token {
-		KEYWORD, IDENTIFIER, OPERATOR, CONSTANT, SYMBOL, BLANK, INTEGER, REAL, BOOLEAN, CHARACTER, STRING
+		KEYWORD, IDENTIFIER, OPERATOR, CONSTANT, SYMBOL, BLANK, INTEGER, REAL, BOOLEAN, CHARACTER, STRING , LBRACKET, RBRACKET , VAR , SEMICOLON, COLON, DOBLECOLON
 	}
 
 	InputStream is;
@@ -31,13 +31,15 @@ public class LexicalAnalyzer {
 		reserved.put("div", Token.OPERATOR.ordinal());
 		reserved.put("mod", Token.OPERATOR.ordinal());
 
-		reserved.put("var", Token.KEYWORD.ordinal());
+		reserved.put("var", Token.VAR.ordinal());
 		reserved.put("end", Token.KEYWORD.ordinal());
 		reserved.put("if", Token.KEYWORD.ordinal());
 		reserved.put("then", Token.KEYWORD.ordinal());
 		reserved.put("function", Token.KEYWORD.ordinal());
 		reserved.put("begin", Token.KEYWORD.ordinal());
 		reserved.put("exit", Token.KEYWORD.ordinal());
+
+
 		nextChar();
 	}
 
@@ -48,12 +50,18 @@ public class LexicalAnalyzer {
 	private boolean isOperator(int c) {
 		return c == '*' || c == '/' || c == '-' || c == '+' || c == '>'
 				|| c == '<' || c == '&' || c == '|' || c == '!' || c == '~'
-				|| c == '=' || c == ':';
+				|| c == '=' ;
 	}
 
 	private boolean isSymbol(int c) {
-		return c == ',' || c == '.' || c == ':' || c == ';'|| c == '('|| c == ')';
+		return  c == '.' ||  c == '('|| c == ')';
 	}
+
+	private boolean isSemicolon(int c) {return  c == ';';}
+
+	private boolean isColon(int c) {return  c == ',';}
+
+	private boolean isDobleSemi(int c) {return  c == ':';}
 
 	private boolean isCharacter(int c) {
 		return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
@@ -146,6 +154,21 @@ public class LexicalAnalyzer {
 			curToken = Token.SYMBOL;
 			temp += (char) curChar;
 			info  = new TokenInfo(temp,Token.SYMBOL , curLine);
+		}
+		else if (isColon(curChar)) {
+			curToken = Token.COLON;
+			temp += (char) curChar;
+			info  = new TokenInfo(temp,curToken , curLine);
+		}
+		else if (isSemicolon(curChar)) {
+			curToken = Token.SEMICOLON;
+			temp += (char) curChar;
+			info  = new TokenInfo(temp,curToken, curLine);
+		}
+		else if (isDobleSemi(curChar)) {
+			curToken = Token.DOBLECOLON;
+			temp += (char) curChar;
+			info  = new TokenInfo(temp,curToken , curLine);
 		}
 
 		// System.out.println((char) curChar);

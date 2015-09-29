@@ -1,0 +1,5 @@
+
+Var
+    myVar   : Integer;
+    myArray : Array[1..5] of Integer;
+Begin
