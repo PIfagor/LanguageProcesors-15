@@ -119,61 +119,72 @@ public class Parser {
 	 * Parse a define.
 	 * 
 	 * <pre>
-	 *   define ::= VAR IDENTIFIER
-	 *              		 | COMMA  
-	 *               		 | COLON 
-	 *             				| ARRAY LBRACK INT_LITERAL DOT DOT INT_LITERAL RBRACK
-	 *             			 | TYPE SEMI
-	 *             		| BEGIN
+	 * 
+	 * 
+	 *   define ::= VAR LISTOFVARS {LISTFVARS}+
+	 *   
+	 *   LISTOFVARS = IDENTIFIER {COMMA  IDENTIFIER}+ COLON TYPEREF SEMI
+	 *   TYPEREF =  ARRAYREF | TYPE  |IDENTIFIER 
+	 * 	     ARRAYREF = ARRAY LBRACK INT_LITERAL DOT DOT INT_LITERAL RBRACK OF TYPEREF      		
+	 *             				|
+	 * 
 	 * 
 	 * </pre>
 	 */
 	public void define() {
 
-		if (have(VAR)) {
-			flag = true;
-			define();
+		mustBe(VAR);
+		listofvars();
+		while (see(IDENTIFIER))
+			listofvars();
 
-		} else if (flag) {
+	}
 
-			if (have(IDENTIFIER)) {
-				if (have(COMMA))
-					define();
-				// mustBe(IDENTIFIER);
-				else if (have(COLON)) {
-					if (have(ARRAY))
-						arrayInit();
-					if (isType()) {
-						mustBe(SEMI);
-						define();
-					} else
-						mustBe(COLON);
-				}
-			} else
-				mustBe(BEGIN);
-		} else
-			mustBe(VAR);
+	private void listofvars() {
+		mustBe((IDENTIFIER));
+		while (have(COMMA)) {
+			mustBe((IDENTIFIER));
+		}
+		mustBe((COLON));
+		typeRef();
+		mustBe(SEMI);
+	}
+
+	private void typeRef() {
+		if (see(ARRAY))
+			arrayRef();
+		else if (isType()) {
+			provideType();
+		} else 
+		{
+			mustBe(IDENTIFIER);
+		}
+			
 	}
 
 	private boolean isType() {
-		boolean flug = see(INTEGER) || see(CHAR) || see(REAL);
-		if (flug) {
-			if (see(INTEGER))
-				have(INTEGER);
-			else if (see(CHAR))
-				have(CHAR);
-			else if (see(REAL))
-				have(REAL);
-		}
-
-		return flug;
+		return  see(INTEGER) || see(CHAR) || see(REAL);
 	}
 
-	private void arrayInit() {
+	private void provideType()
+	{
+		if (see(INTEGER))
+			have(INTEGER);
+		else if (see(CHAR))
+			have(CHAR);
+		else if (see(REAL))
+			have(REAL);
+	}
+	
+	
+	private void arrayRef() {
+		mustBe(ARRAY);
 		mustBe(LBRACK);
 		demisionOfArray();
 		mustBe(RBRACK);
 		mustBe(OF);
+
+		typeRef();
 		// define();
 	}
 
