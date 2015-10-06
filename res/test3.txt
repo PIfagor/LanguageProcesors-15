@@ -3,3 +3,7 @@ Var
     myVar   : Integer;
     myArray : Array[1..5] of Integer;
 Begin
+
+VAR
+    myVar , b  : INTEGER;
+    myArray : ARRAY[1..5] OF INTEGER;
