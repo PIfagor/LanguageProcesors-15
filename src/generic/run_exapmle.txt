@@ -1,0 +1,12 @@
+Розпакувати архів examples , перемістити все 1 папку(exp: C:\test) додати j--.jar
+Відкрити консоль і веести такі команди
+
+javac -cp j--.jar GenHelloWorld.java
+
+set CLASSPATH=.;j--.jar;
+
+java GenHelloWorld
+
+java HelloWorld
+
+Повторити для інших файлів.
